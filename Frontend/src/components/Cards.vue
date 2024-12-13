@@ -4,8 +4,9 @@
         <div class="col" v-for="(card, index) in cards" :key="index">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title"></h5>
+              <h5 class="card-title">{{ card.osztalyNev }}</h5>
               <p class="card-text">
+                {{ card.nev }}
               </p>
             </div>
           </div>
@@ -16,7 +17,11 @@
   </template>
   
   <script>
-  export default {};
+  export default {
+    props: [
+      "cards"
+    ]
+  };
   </script>
   
   <style>
