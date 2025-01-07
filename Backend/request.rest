@@ -6,9 +6,15 @@
 
 
 # ------------  lekérdezések ---------
-### get users
+### get osztálynévsor
 get {{host}}/api/queryOsztalynevsor
 Accept: application/json
+
+
+### get osztálynévsor
+get {{host}}/api/queryOsztalynevsorObj
+Accept: application/json
+
 
 ### get Valakinek az osztálytársai
 get {{host}}/api/queryOsztalytasrsak/Ubul
