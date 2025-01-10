@@ -29,7 +29,7 @@ get {{host}}/api/queryOsztalynevsorLimit/3/4
 Accept: application/json
 
 ### get Oldalszám lekérdező
-get {{host}}/api/queryHanyOldalVan/4
+get {{host}}/api/queryHanyOldalVan/3
 Accept: application/json
 
 ### get diák kereső by név
