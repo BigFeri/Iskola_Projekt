@@ -20,36 +20,8 @@ class SportolasFactory extends Factory
      */
     public function definition(): array
     {
-
-        do {
-            $diakokId = Diak::inRandomOrder()->first()->id;
-            $sportokId = Sport::inRandomOrder()->first()->id;
-        } while (Sportolas::where('diakokId', $diakokId)->where('sportokId', $sportokId)->exists());
-       
-    
-
-        // return [
-        //     'diakokId' => $diakokId,
-        //     'sportokId' => $sportokId,
-        // ];
-
-        // DB::beginTransaction();
-
-        // do {
-        //     $diakokId = Diak::inRandomOrder()->first()->id;
-        //     $sportokId = Sport::inRandomOrder()->first()->id;
-        // } while (Sportolas::where('diakokId', $diakokId)->where('sportokId', $sportokId)->exists());
-    
-        // Sportolas::create([
-        //     'diakokId' => $diakokId,
-        //     'sportokId' => $sportokId,
-        // ]);
-    
-        // DB::commit();
-    
         return [
-            'diakokId' => $diakokId,
-            'sportokId' => $sportokId,
+
         ];
     }
 }

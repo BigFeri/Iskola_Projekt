@@ -30,9 +30,6 @@ class DiakFactory extends Factory
             $randomDate = fake()->date('Y-m-d', $maxDate);
         }
 
-
-
-
         $neme = fake()->boolean();
         if ($neme) {
             //férfi
@@ -49,8 +46,8 @@ class DiakFactory extends Factory
             'nev' => $nev,
             'neme' => $neme,
             'helyseg' => $faker->city(),
-            'szuletett' => $randomDate,
             // 'helyseg' => VeletlenVaros::randomVaros(),
+            'szuletett' => $randomDate,
             'osztondij' => $faker->numberBetween(1000, 10000),
             'atlag' => $faker->randomFloat(1, 1, 5),
         ];
