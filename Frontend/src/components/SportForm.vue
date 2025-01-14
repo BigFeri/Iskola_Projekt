@@ -10,17 +10,18 @@
           class="form-control"
           id="sportNev"
           required
-          v-model="dataLine.name"
+          v-model="dataLine.sportNev"
         />
         <div class="valid-feedback">&nbsp;</div>
         <div class="invalid-feedback">Név kitöltése kötelező</div>
       </div>
+
+      <button type="submit" class="btn btn-success">Mentés</button>
     </form>
   </div>
 </template>
   
   <script>
-import dateFormat, { masks } from "dateformat";
 export default {
   props: ["dataLine"],
   emits: ["saveDataLine"],

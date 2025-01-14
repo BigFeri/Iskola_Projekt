@@ -63,15 +63,16 @@ class DataLine {
     this.sportNev = sportNev;
   }
 }
-// import ProfessionForm from "@/components/ProfessionForm.vue";
+import SportForm from "@/components/SportForm.vue";
 import OperationsCrud from "@/components/OperationCrud.vue";
 import * as bootstrap from "bootstrap";
 import axios from "axios";
 import { BASE_URL } from "@/helpers/baseUrls";
+import Modal from "@/components/Modal.vue";
 
 // import uniqid from "uniqid";
 export default {
-  components: {OperationsCrud },
+  components: {OperationsCrud, Modal, SportForm },
   mounted() {
     this.modal = new bootstrap.Modal("#modal", {
       keyboard: false,
@@ -102,14 +103,13 @@ export default {
   methods: {
     //rename
     deleteDataLineById() {
-      this.collection = this.collection.filter(
-        (p) => p.id != this.selectedRowDataLineId
-      );
+      
     },
     async getCollection() {
-      const url = `${BASE_URL}/sport`;
-      this.collection = await axios.get(url);
+      const url = `${BASE_URL}/sports`;
+      const response = await axios.get(url);
       this.collection = response.data.data;
+      console.log(this.collection);
       
     },
     //rename
